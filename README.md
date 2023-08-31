@@ -20,7 +20,7 @@ A condition $C$ represents the fingerprint of a particular circuit<br>
 > In most cases it is the **hash digest** of the data that represents the condition
 
 Agents can define a condition that must be satisfied in order for a particular action or transaction to occur<br>
-> Each condition identifies a circuit composed of one or more logic gates that will be evaluated by validating a signature or checking the digest of an hash function
+> Each condition **identifies a circuit** composed of one or more logic gates that will be evaluated by validating a signature or checking the digest of an hash function
 
  ```markdown
 Condition ::= CHOICE {
@@ -54,10 +54,11 @@ ConditionTypes ::= BIT STRING {
 ```
 
 ### Fulfillment 📦
-The **fulfillment** $F$ is a data structure that represents the **circuit definition** and the minimum required logic gates with their inputs
-> Circuit structure depends on the encoded cryptographic signature schemas or hash digest preimages 
+The fulfillment $F$ represents the input given to a circuit 
+> Data structure that holds the **information required** to satisfy a condition
 
-It represents the cryptographic proof or evidence provided to satisfy the conditions specified in a crypto-condition
+It constitutes the cryptographic proof or evidence provided to validate the condition
+> The **internal structure** depends on the crypto condition format chosen
 
 ```markdown
 Fulfillment ::= CHOICE {
@@ -67,6 +68,8 @@ Fulfillment ::= CHOICE {
     rsaSha256          [3]    RsaSha256Fulfillment
     ed25519Sha256      [4]    Ed25519Sha256Fulfillment
 }
+
+# EXAMPLES
 
 PreimageSHA256
 PreimageFulfillment ::= SEQUENCE {
@@ -79,7 +82,7 @@ ThresholdFulfillment ::= SEQUENCE {
     subconditions      SET of conditions
 }
 
-ED25519SHA256
+Ed25519SHA256
 Ed25519Sha256Fulfillment ::= SEQUENCE {
     publicKey    OCTET STRING (size(32))
     signature    OCTET STRING (size(64))
