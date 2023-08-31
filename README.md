@@ -90,9 +90,10 @@ Ed25519Sha256Fulfillment ::= SEQUENCE {
 ```
 
 ### Validation 🔑
-A provided fulfillment is considered valid if it matches the circuit fingerprint which is another way of saying that the condition is satisfied
-> It is possible to include an optional input message for evaluating the whole fulfillment
+A provided fulfillment is considered valid if it matches the fingerprint and if the circuit output is `TRUE`
+> Sometimes the circuit provides a signature mechanism and an **input message** must be included for evaluating the whole fulfillment
 
+Acceptance of a fulfillment is dependent on it meeting the specified condition
 
 ## Experiments 🧪
 The linked Google Colab contains some practical experiments with various types of the crypto conditions 
