@@ -95,5 +95,9 @@ A provided fulfillment is considered valid if it matches the fingerprint and if 
 
 Acceptance of a fulfillment is dependent on it meeting the specified condition
 
+```
+Validation : Validate(C,F,optional : M) -> Boolean
+```
+
 ## Experiments 🧪
-The linked Google Colab contains some practical experiments with various types of the crypto conditions 
+The Jupyter notebook contains some practical experiments done with various types of crypto conditions 
