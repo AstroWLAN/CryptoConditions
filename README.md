@@ -16,13 +16,21 @@ Primitives like `SHA256` or signature schemes such as `Ed25519` can be used as l
 > The term **circuit** refers to a set of logical and cryptographic operations that determine whether a given condition is satisfied
 
 ### Condition 🔦
-The condition $C$ represents the **fingerprint** of the circuit<br>
-> For most condition types the fingerprint is a cryptographically secure hash of the data which defines the condition such as a public key
+A condition $C$ represents the fingerprint of a particular circuit<br>
+> In most cases it is the **hash digest** of the data that represents the condition
 
-Users or developers define a set of conditions that need to be satisfied for a particular action or transaction to occur<br>
-> A condition identifies a logical boolean circuit constructed from one or more logic gates evaluated by either validating a cryptographic signature or verifying the preimage of an hash digest
+Agents can define a condition that must be satisfied in order for a particular action or transaction to occur<br>
+> Each condition identifies a circuit composed of one or more logic gates that will be evaluated by validating a signature or checking the digest of an hash function
 
  ```markdown
+Condition ::= CHOICE {
+    PreimageSHA256     [0]  SimpleSHA256Condition 
+    PrefixSHA256       [1]  CompoundSHA256Condition
+    ThresholdSHA256    [2]  CompoundSHA256Condition
+    RSASHA256          [3]  SimpleSHA256Condition 
+    Ed25519SHA256      [4]  SimpleSHA256Condition 
+}
+
 SimpleSHA256Condition 
 Condition ::= SEQUENCE {
     fingerprint    OCTET STRING (size(32))
@@ -37,11 +45,11 @@ Condition ::= SEQUENCE {
 }
 
 ConditionTypes ::= BIT STRING {
-    preImageSha256     (0)
-    prefixSha256       (1)
-    thresholdSha256    (2)
-    rsaSha256          (3)
-    ed25519Sha256      (4)
+    PreimageSHA256     (0)
+    PrefixSHA256       (1)
+    ThresholdSHA256    (2)
+    RSASHA256          (3)
+    Ed25519SHA256      (4)
 }
 ```
 
