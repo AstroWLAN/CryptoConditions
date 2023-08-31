@@ -3,7 +3,7 @@
 
 | Author 👨🏼‍💻 | Link 🌍 | Colaboratory 🧫 | Version 📐 | Language 🐍 | 
 | :--- | :--- | :--- | :--- | :--- |
-| Dario Crippa | [Paper](https://datatracker.ietf.org/doc/html/draft-thomas-crypto-conditions-04) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AstroWLAN/CryptoConditions/blob/main/Crypto_Conditions.ipynb) | `1.0.0` | `python` |
+| Dario Crippa | [Paper](https://datatracker.ietf.org/doc/html/draft-thomas-crypto-conditions-04) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kJN5vnPWcCMais53mQtVWRpg0tYpMLOC?usp=sharing) | `1.0.2` | `Python` |
 
 ## Abstract 💭
 Crypto conditions define a set of encoding formats and data structures used to describe conditions and fulfillments
