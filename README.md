@@ -72,12 +72,12 @@ Fulfillment ::= CHOICE {
 # EXAMPLES
 
 PreimageSHA256
-PreimageFulfillment ::= SEQUENCE {
+PreimageSHA256Fulfillment ::= SEQUENCE {
     preimage    OCTET STRING
 }
 
 ThresholdSHA256
-ThresholdFulfillment ::= SEQUENCE {
+ThresholdSHA256Fulfillment ::= SEQUENCE {
     subfulfillments    SET of fulfillments
     subconditions      SET of conditions
 }
