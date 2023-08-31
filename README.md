@@ -7,13 +7,13 @@
 
 ## Abstract 💭
 Crypto conditions define a set of encoding formats and data structures used to describe conditions and fulfillments
-> Method for combining existing signature schemes and hash functions to create sophisticated signature arrangements that can <br> self-validate based on specific conditions
+> Method for combining signature mechanisms and hash functions to create **sophisticated signature arrangements** that can <br> self-validate based on specific conditions
 
 These schemes are often adopted in the realm of blockchain and cryptocurrencies to create rules and standards for conducting transactions or manage smart contracts<br>
-> Crypto conditions enable the definition of requirements that must be met before an operation or transaction can be considered valid.
+> Crypto conditions enable the **definition of requirements** that must be met before an operation or a transaction can be considered valid
 
-Cryptographic primitives like `SHA256` or signature schemes such as `Ed25519` can be used as logic gates to build intricate boolean circuits that can later be used as composite signatures<br>
-> Different conditions present different internal structures
+Primitives like `SHA256` or signature schemes such as `Ed25519` can be used as logic gates to build intricate boolean circuits that can later be used as composite signatures<br>
+> The term **circuit** refers to a set of logical and cryptographic operations that determine whether a given condition is satisfied
 
 ### Condition 🔦
 The condition $C$ represents the **fingerprint** of the circuit<br>
