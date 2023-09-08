@@ -7,7 +7,7 @@
 
 ## Abstract 💭
 Crypto conditions define a set of encoding formats and data structures used to describe conditions and fulfillments
-> Method for combining signature mechanisms and hash functions to create **sophisticated signature arrangements** that can <br> self-validate based on specific conditions
+> Method for combining signature mechanisms and hash functions to create **sophisticated signature arrangements** that can self-validate based on specific conditions
 
 These schemes are often adopted in the realm of blockchain and cryptocurrencies to create rules and standards for conducting transactions or manage smart contracts<br>
 > Crypto conditions enable the **definition of requirements** that must be met before an operation or a transaction can be considered valid
